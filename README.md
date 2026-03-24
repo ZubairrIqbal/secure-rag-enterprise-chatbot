@@ -45,3 +45,6 @@ A secure internal company chatbot built with Retrieval-Augmented Generation (RAG
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
+
+# Note: 
+Data Used in this project collect from: https://github.com/codebasics/ds-rpc-01
