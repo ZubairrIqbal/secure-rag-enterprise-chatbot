@@ -1,0 +1,15 @@
+langchain
+langchain-community
+langchain-core
+langchain-groq
+langchain-huggingface
+chromadb
+python-dotenv
+streamlit
+pandas
+unstructured
+markdown
+tiktoken
+sentence-transformers
+langchain-text-splitters
+streamlit
