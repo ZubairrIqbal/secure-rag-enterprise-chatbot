@@ -1,3 +1,7 @@
+# Architectural Diagrame
+![Secure Company RAG Chatbot Architecture](images/image.png)
+
+
 # Secure Company RAG Chatbot
 
 A secure internal company chatbot built with Retrieval-Augmented Generation (RAG), role-based access control (RBAC), and guardrails for safe document-based question answering.
@@ -48,3 +52,6 @@ A secure internal company chatbot built with Retrieval-Augmented Generation (RAG
 
 # Note: 
 Data Used in this project collect from: https://github.com/codebasics/ds-rpc-01
+
+
+[def]: image.png

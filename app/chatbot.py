@@ -1,4 +1,4 @@
-from app.guardrails import check_sensitive_query, check_out_of_scope, mask_sensitive_data
+import app.guardrails
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from app.config import GROQ_API_KEY, MODEL_NAME
@@ -31,18 +31,18 @@ def create_chat_model():
 
 def answer_question(vectorstore, question, role, k=3):
 
-    is_sensitive, msg = check_sensitive_query(question)
+    is_sensitive, msg = app.guardrails.check_sensitive_query(question)
     if is_sensitive:
-        return f"❌ Access Denied: {msg}", []
+        return f"Access Denied: {msg}", []
 
-    is_out, msg = check_out_of_scope(question)
+    is_out, msg = app.guardrails.check_out_of_scope(question)
     if is_out:
-        return f"❌ {msg}", []
+        return f"{msg}", []
 
     retrieved_docs = retrieve_documents(vectorstore, question, role, k=k)
 
     if not retrieved_docs:
-        return "❌ You are not authorized to access this information.", []
+        return "You are not authorized to access this information.", []
 
     context = format_context(retrieved_docs)
 
