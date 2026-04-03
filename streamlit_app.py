@@ -8,7 +8,7 @@ from app.logger import log_interaction
 
 
 st.set_page_config(
-    page_title="Secure Company RAG Chatbot",
+    page_title="Secure RAG Chatbot",
     page_icon="🔐",
     layout="wide"
 )
@@ -37,7 +37,7 @@ st.sidebar.info(
     "This chatbot uses retrieval-augmented generation with RBAC and guardrails."
 )
 
-st.title("🔐 Secure Internal Company Chatbot")
+st.title("Secure Internal Chatbot")
 st.write("Ask questions from company documents based on your role and permissions.")
 
 question = st.text_input("Enter your question")
