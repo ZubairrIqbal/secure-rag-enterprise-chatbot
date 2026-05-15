@@ -1,0 +1,9 @@
+myenv/
+.env
+.git/
+__pycache__/
+.pytest_cache/
+logs/
+*.pyc
+*.pyo
+*.pyd
