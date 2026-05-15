@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rbac-rag-backend
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile.backend
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: MODEL_NAME
+        value: llama-3.1-8b-instant
+      - key: SECRET_KEY
+        sync: false
